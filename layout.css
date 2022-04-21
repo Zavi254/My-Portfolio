@@ -1,9 +1,12 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 body{
     font-family: 'Barlow', sans-serif;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,116,124,1) 0%, rgba(33,84,170,1) 68%, rgba(0,212,255,1) 100%);
 }
 
 @media (min-width:320px) and (max-width:768px){
@@ -33,7 +36,7 @@ body{
     }
     .profileSection{
         display: flex;
-        flex-direction: row-reverse;
+        flex-direction: column;
         border: 2px solid red;
         justify-content: space-between;
         background-color: lightgray;
@@ -46,7 +49,8 @@ body{
         flex-basis: 50%;
     }
     .myImage{
-        width: 100%;
+        max-width: 100%;
+        width: 40%;
         border-radius: 50%;
     }
 }
@@ -78,7 +82,8 @@ body{
     }
     .profileSection{
         display: flex;
-        flex-direction: row-reverse;
+        flex-direction: column;
+        border: 2px solid red;
         justify-content: space-between;
         background-color: lightgray;
     }
@@ -90,58 +95,67 @@ body{
         flex-basis: 50%;
     }
     .myImage{
-        width: 100%;
+        max-width: 100%;
+        width: 60%;
         border-radius: 50%;
     }
 }
 @media (min-width: 992px) and (max-width:1199px){
     #frontEndDeveloper{
         font-size: 3rem;
-        color: rgb(41, 35, 32);
-        text-align: center;
     }
     ul{
         display: flex;
         flex-direction: row;
-        align-items: center;
-        background-color: teal;
-        margin-bottom: 50px;
-        padding: 22px;
+        background-color: #0E0E0C;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
     }
     ul li{
         list-style-type: none;
-        font-size: 1.8rem;
+        font-size: 1.5rem;
         text-align: center;
     }
     ul li a:hover{
         background-color: #ffffff;
-        color: #000000;
+        color: black;
     }
     ul li a{
         text-decoration: none;
         color: #ffffff;
         font-weight: bold;
         display: block;
-        padding: 10px;
-        padding: 25px;
+        padding: 20px;
     }
     .profileSection{
+        margin-top: 120px;
         display: flex;
-        flex-direction: row;
         justify-content: space-between;
+        color: #ffffff;
+        height: auto;
+        background: rgb(2,0,36);
+        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,116,124,1) 0%, rgba(33,84,170,1) 68%, rgba(0,212,255,1) 100%);
     }
     .nameSection{
+        font-size: 1.3rem;
         flex-basis: 50%;
-        text-align: center;
-        align-self: center;
+    }
+    .nameSection > div{
+        margin-top: 20px;
+        margin-left: 70px;
     }
     .photoSection{
         flex-basis: 50%;
-        align-self: center;
     }
     .myImage{
-        width: 50%;
+        max-width: 100%;
+        width: 60%;
+        height: auto;
         border-radius: 50%;
+        border: 20px solid #202022;
+        margin: auto;
     }
 }
 @media (min-width: 1200px) and (max-width:1399px){
@@ -161,7 +175,6 @@ body{
         list-style-type: none;
         font-size: 1.5rem;
         text-align: center;
-        /* border: 1px solid; */
     }
     ul li a:hover{
         background-color: #ffffff;
@@ -176,44 +189,42 @@ body{
     }
     .profileSection{
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
         color: #ffffff;
-        height: 700px;
-        background: rgb(2,0,36);
-        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,116,124,1) 0%, rgba(33,84,170,1) 68%, rgba(0,212,255,1) 100%);
+        margin-top: 120px;
+        margin-left: 90px;
+        margin-right: 90px;
     }
     .nameSection{
-        align-self: center;
-        margin: auto;
         font-size: 1.3rem;
-    }
-    .aboutNameSection{
+        flex-basis: 50%;
         display: flex;
         flex-direction: column;
-        align-content: space-around;
-    }
-    .aboutNameSection > div{
-        margin: 20px;
+        justify-content: space-around;
     }
     .photoSection{
-        align-self: center;
+        flex-basis: 50%;
     }
     .myImage{
+        max-width: 100%;
         width: 60%;
         border-radius: 50%;
         border: 20px solid #202022;
+        margin: auto;
+
     }
 }
 @media (min-width: 1400px){
     #frontEndDeveloper{
-        font-size: 2rem;
-        text-align: center;
+        font-size: 3rem;
     }
     ul{
         display: flex;
-        flex-direction:row;
-        background-color: teal;
+        flex-direction: row;
+        background-color: #0E0E0C;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
     }
     ul li{
         list-style-type: none;
@@ -222,30 +233,38 @@ body{
     }
     ul li a:hover{
         background-color: #ffffff;
+        color: black;
     }
     ul li a{
         text-decoration: none;
         color: #ffffff;
         font-weight: bold;
         display: block;
-        padding: 10px;
+        padding: 20px;
     }
     .profileSection{
         display: flex;
-        flex-direction: row-reverse;
-        border: 2px solid red;
+        color: #ffffff;
+        margin-top: 120px;
         justify-content: space-between;
-        background-color: lightgray;
     }
     .nameSection{
+        font-size: 1.3rem;
         flex-basis: 50%;
-        align-self: center;
+    }
+    .nameSection > div{
+        margin-top: 60px;
+        margin-left: 100px;
     }
     .photoSection{
         flex-basis: 50%;
     }
     .myImage{
-        width: 100%;
+        max-width: 100%;
+        width: 60%;
         border-radius: 50%;
+        border: 20px solid #202022;
+        margin: auto;
+
     }
 }
